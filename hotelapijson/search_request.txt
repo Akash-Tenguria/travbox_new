@@ -1,0 +1,24 @@
+{
+  "CheckInDate": "23/02/2023",
+  "NoOfNights": "1",
+  "CountryCode": "IN",
+  "CityId": "130443",
+  "ResultCount": null,
+  "PreferredCurrency": "INR",
+  "GuestNationality": "IN",
+  "NoOfRooms": "1",
+  "RoomGuests": [
+    {
+		  "NoOfAdults": 1,
+		  "NoOfChild": 0,
+		  "ChildAge": null	
+		}
+  ],
+  "PreferredHotel": "",
+  "MaxRating": "5",
+  "MinRating": "3",
+  "ReviewScore": null,
+  "IsNearBySearchAllowed": false,
+  "EndUserIp": "119.18.54.40",
+  "TokenId": "1b3ceaf8-fffd-4e2d-bd76-2336be230791"
+}

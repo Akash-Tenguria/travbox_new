@@ -1,0 +1,252 @@
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /new/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+
+RewriteRule ^quotationpreview/(.*)/(.*)/(.*)$ quotationpreview.php?i=$1&n=$2&p=$3 [L]
+
+RewriteRule ^quotationpreview/(.*)/(.*)$ quotationpreview.php?i=$1&n=$2 [L]
+
+
+
+RewriteRule ^bus$  buspage.php  [NC,L]
+
+RewriteRule ^landing-page/(.*)$ landingpagepreview.php?id=$1 [L]
+
+RewriteRule ^topup-request$  topuprequest.php  [NC,L]
+
+RewriteRule ^querylist$  querypage.php  [NC,L]
+
+RewriteRule ^flyerdesigner$  flyerdesigner.php  [NC,L]
+
+RewriteRule ^package-builder$  packagebuilderpage.php  [NC,L]
+
+RewriteRule ^add-quotation$  quotationaddpage.php  [NC,L]
+
+RewriteRule ^query-view$  queryviewpage.php  [NC,L]
+
+RewriteRule ^add-query$  addquerypage.php  [NC,L]
+
+RewriteRule ^landing-page$  landingpage.php  [NC,L]
+
+RewriteRule ^add-new-landing-page$  addlandingpage.php  [NC,L]
+
+RewriteRule ^bus-search$  bussearchpage.php  [NC,L]
+
+RewriteRule ^flight-review-book$ flight_review_book.php  [NC,L]
+
+RewriteRule ^hotels-enquiries$ hotel_enquiry.php  [NC,L]
+
+RewriteRule ^holidays-enquiries$ holidays_enquiry.php  [NC,L]
+
+RewriteRule ^flights$ flightpage.php  [NC,L]
+
+RewriteRule ^flight-search$ flightsearch.php  [NC,L]
+
+RewriteRule ^about-us$ aboutpage.php  [NC,L]
+
+RewriteRule ^terms-conditions$ termsconditionspage.php  [NC,L]
+
+RewriteRule ^payment-security$ paymentsecuritypage.php  [NC,L]
+
+RewriteRule ^privacy-policy$ privacypolicypage.php  [NC,L]
+
+RewriteRule ^careers$ careerspage.php  [NC,L]
+
+RewriteRule ^contact-us$ contactpage.php  [NC,L]
+
+RewriteRule ^flight-booking-action$ flight_booking_action.php  [NC,L]
+
+RewriteRule ^flight-booking-action2$ flight_booking_action_tbo.php  [NC,L]
+
+RewriteRule ^flight-booking-action3$ flight_booking_action_gf.php  [NC,L]
+
+RewriteRule ^flight-booking-action5$ flight_booking_action_mf.php  [NC,L]
+
+RewriteRule ^flight-booking-action4$ flight_booking_action_ak.php  [NC,L]
+
+RewriteRule ^view-ticket$  view_ticket.php  [NC,L]
+
+RewriteRule ^web-check-in$  web_check_in.php  [NC,L]
+
+RewriteRule ^my-profile$  my_profile.php  [NC,L]
+RewriteRule ^settings$  settingspage.php  [NC,L]
+
+RewriteRule ^balance-sheet$  balance_sheet.php  [NC,L]
+
+RewriteRule ^hotels-bookings$  hotel_booking.php  [NC,L]
+
+RewriteRule ^flight-bookings$  flight_booking.php  [NC,L]
+
+RewriteRule ^bus-bookings$  bus_booking.php  [NC,L]
+
+RewriteRule ^invoice$  invoice_list.php  [NC,L]
+
+RewriteRule ^fixdeparture-flights$  fixdepartureflight.php  [NC,L]
+
+RewriteRule ^flight-invoice$  flightInvoice.php  [NC,L]
+
+RewriteRule ^flight-bookings-invoice$  flight_invoice_master.php  [NC,L]
+
+RewriteRule ^hotels-bookings-invoice$  hotel_invoice_master.php  [NC,L]
+
+RewriteRule ^bus-invoice-list$  busInvoicemaster.php  [NC,L]
+
+RewriteRule ^hotels$  hotelpage.php  [NC,L]
+
+RewriteRule ^hotel-search$  hotelsearch.php  [NC,L]
+
+RewriteRule ^hotel-view$  hotel_view.php  [NC,L]
+
+RewriteRule ^domestic-holidays$  domesticholidayspage.php  [NC,L]
+RewriteRule ^domestic-holidays-search$  domesticholidays_search_page.php  [NC,L]
+RewriteRule ^international-holidays$  internationalholidayspage.php  [NC,L]
+RewriteRule ^international-holidays-search$  internationalholidays_search_page.php  [NC,L]
+RewriteRule ^holidays$  holidayspage.php  [NC,L]
+
+RewriteRule ^view-package$  packagedetails.php  [NC,L]
+
+RewriteRule ^package-search$  packagesearch.php  [NC,L]
+
+RewriteRule ^online-recharge$  onlinerecharge.php  [NC,L]
+
+RewriteRule ^hotel-view2$  hotel_view2.php  [NC,L]
+
+RewriteRule ^hotel-review$  hotel_review.php  [NC,L]
+
+RewriteRule ^hotel-booking-action$  hotelbookingaction.php  [NC,L]
+
+RewriteRule ^hotel-booking-confirmation$  hotel_booking_confirmation.php  [NC,L]
+
+RewriteRule ^bus-booking-confirmation$  bus_booking_confirmation.php  [NC,L]
+
+
+
+RewriteRule ^cabs$  cabspage.php  [NC,L]
+RewriteRule ^flight-booking-details$  flightbookingdetails.php  [NC,L]
+RewriteRule ^flight-booking-amendments$  flightbookingamendments.php  [NC,L]
+
+RewriteRule ^topup-offline$  topupOffline.php  [NC,L]
+
+RewriteRule ^cabssearch$  cabssearchpage.php  [NC,L]
+
+RewriteRule ^review-cab-booking$  cab_booking_review.php  [NC,L]
+
+RewriteRule ^cab-booking-payment$  cab_booking_payment.php  [NC,L]
+
+RewriteRule ^my-customer$  my_customer.php  [NC,L]
+
+RewriteRule ^onlinerecharge$  online_recharge.php  [NC,L]
+
+RewriteRule ^flight-booking-tripjack-action$  flight_booking_action_tripjack.php  [NC,L]
+
+
+
+
+
+RewriteRule ^sign-up$  sign_up_page.php  [NC,L]
+
+RewriteRule ^process-signup$  signup_action.php  [NC,L]
+
+RewriteRule ^signup-done$  signup_done.php  [NC,L]
+
+
+
+
+
+
+
+RewriteRule ^quotationpreview/(.*)/(.*)/(.*)$ quotationpreview.php?i=$1&n=$2&p=$3 [L]
+
+RewriteRule ^quotationpreview/(.*)/(.*)$ quotationpreview.php?i=$1&n=$2 [L]
+
+ 
+
+RewriteRule ^sharepackage/(.*).html$ packagepreview.php?i=$1 [L]
+
+RewriteRule ^sharepackagehtml/(.*).html$ itineraries_final_html.php?i=$1 [L]
+
+RewriteRule ^sharequotation/(.*).html$ quotationpreview.php?i=$1 [L]
+
+
+
+RewriteRule ^ASDFFJSDKFLJOASDFLJ.package$ packagepreview.php  [NC,L] 
+
+RewriteRule ^ASDFFJRKDMJOASDFLJ.quotation$ quotationpreview.php  [NC,L] 
+
+
+
+
+
+RewriteRule ^PTIYTOLLHJHJKGJHKKJ.html$ invoiceview.php  [NC,L] 
+
+RewriteRule ^readqr.html$ readqrpage.php  [NC,L] 
+
+RewriteRule ^PTIYTKKLHJXXJHKYJ.package$ packageview.php  [NC,L] 
+
+RewriteRule ^RKDMKKLHJXXJHKYJ.quotation$ quotationview.php  [NC,L]
+
+
+
+
+
+RewriteRule ^setting.html$ companysetting.php  [NC,L]
+
+ 
+
+
+
+RewriteRule ^flight-booking-status$ flightbookingaction.php  [NC,L]
+
+RewriteRule ^flight-booking-status-return$ flightbookingactionreturn.php  [NC,L]
+
+RewriteRule ^hotel-booking-status$ hotelbookingaction.php  [NC,L]
+
+RewriteRule ^display.html$ index.php  [NC,L]
+
+RewriteRule ^copyhtml.html$ copyhtmlpage.php  [NC,L]
+
+RewriteRule ^showpackage.html$ sharePackage.php  [NC,L]
+
+RewriteRule ^showpackagelink.html$ sharePackageLink.php  [NC,L]
+
+RewriteRule ^paymentdone.html$ paymentdone.php  [NC,L]
+
+RewriteRule ^login$ loginpage.php  [NC,L] 
+
+RewriteRule ^login-signup.html$ loginpage.php  [NC,L] 
+
+RewriteRule ^logout$ logoutpage.php  [NC,L] 
+
+RewriteRule ^frmaction.html$ actionpage.php  [NC,L]  
+
+RewriteRule ^dashboard.html$ index.php  [NC,L] 
+
+RewriteRule ^preview.html$ preview.php  [NC,L] 
+
+RewriteRule ^printinvoice.html$ printinvoice.php  [NC,L] 
+
+RewriteRule ^export.html$ export.php  [NC,L] 
+
+RewriteRule ^export-user-wise.html$ exportuserwise.php  [NC,L] 
+
+RewriteRule ^export-client-wise.html$ exportclientwise.php  [NC,L] 
+
+RewriteRule ^export-query-wise.html$ exportquerywise.php  [NC,L] 
+
+RewriteRule ^export-destination-wise.html$ exportdestinationwise.php  [NC,L]
+
+RewriteRule ^bus-detail.html$ busdetail.php  [NC,L]  
+
+RewriteRule ^download-banner.html$ download-banner.php  [NC,L]  
+
+RewriteRule ^XKDJFH19463NHY/(.*) filedocuments/$1
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php74” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php74 .php .php7 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit

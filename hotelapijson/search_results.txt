@@ -1,0 +1,1 @@
+{"HotelSearchResult":{"ResponseStatus":4,"Error":{"ErrorCode":6,"ErrorMessage":"Invalid Token"},"TraceId":"9b307f44-d676-441d-b6bb-85fb5c7a0fa7"}}

@@ -1,0 +1,60 @@
+ 
+.create
+{
+    opacity: 90%;
+}
+
+.info input, select, textarea
+{
+    box-shadow: none;
+
+}
+
+ 
+.register-btn
+{
+    margin-top: 1rem !important;
+    padding: 10px 30px !important;
+    background-color: #ea2330 !important;
+    color: #fff !important;
+}
+
+.do-more
+{
+    opacity: 95%;
+}
+.card-sec p 
+{
+    margin-bottom: 0 !important;
+}
+
+.right_bg
+{
+    background-color: #368eed !important;
+}
+
+.card-sec
+{
+    padding: 16px;
+}
+
+.have-paira
+{
+    font-size: 14px !important;
+    margin-bottom: 8px !important;
+    margin-top: 2rem !important;
+}
+
+.log
+{
+    border: 1px solid  #fff !important;
+    color: #fff !important;
+    width: 100%;
+    margin-bottom: 2rem !important;
+    
+}
+
+.right-content i 
+{
+    padding-left: 10px !important;
+}

@@ -1,0 +1,1215 @@
+*{ margin:0;padding: 0;box-sizing: border-box;} 
+:root {
+    --blue: #e84031; 
+    --darkgray: #333333; 
+    --black: #000000; 
+    --white: #ffffff;
+    --redcolor:#ff3700;
+    --smallgray:#999999;
+    --lightgray: #ebecf1; 
+    --trwhite: #ffffff2e; 
+    --lightyellow: #eeeed5; 
+    --lowblue: #f3f7fa; 
+    --verylightblue: #f0faff; 
+    --midgay: #666666; 
+    --pink: #c97bf3; 
+    --darkbrown: #10062b; 
+    --hovergray: #f5f6f7; 
+    --pinkred: #9d2854; 
+    --searchbtn:#2291e6;
+    --greyouter:#f3f7fa;
+    --bookclr:#ffedd1;
+    --greencolor:#009846;
+    --redcolor:#ee2e24;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track { background-color:#EFEFEF;
+    border-radius: 0px;
+    -webkit-border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 0px; background-color:#666666;
+    border-radius: 0px; 
+}
+ 
+body{margin:0px; padding:0px; font-size:13px; color:var(--black); font-family: 'Quicksand', sans-serif; width:100%; height:100%; background-color:#FFFFFF; background-color:#fefefe;}
+html{width:100%; height:100%;}
+
+a{text-decoration:none; color:#0067fe;}
+a:hover{transition: background-color 0.5s ease;}
+h1, h2, h3, h4, h5, h6, form, img{border:0px; padding:0px; margin:0px;}
+#header{width:100%; position:fixed; left:0px; top:0px; background-color:#FFFFFF; position:fixed; z-index:999;box-shadow: 0px 0px 10px #0000001f;}
+#header #logo{float:left; padding:10px;}
+#header #logo img{height:32px;}
+#header #menu{float:left; margin-left:10px;}
+#header #menu a { float: left; display: block; border: 1px solid var(--lightgray); padding: 5px 10px 5px 5px; color: var(--darkgray); font-weight: 800; font-size: 14px; margin-top: 7px; border-radius: 10px; margin-right: 10px; line-height: 26px; } 
+#header #menu .active{background-color:var(--blue); color:var(--white);border: 1px solid var(--blue);} 
+#header #menu a:hover{background-color:var(--blue); color:var(--white);border: 1px solid var(--blue);}
+#header #menu a span { width: 26px; height: 26px; display: inline-block; text-align: center; padding: 0px; background-color:var(--blue); color:var(--white); border-radius:6px; margin-right: 5px; }
+#header #rightmenu{float:right; margin-left:10px;} 
+#header #rightmenu{float:right;}
+#header #rightmenu .btn{ float: left; display: block; border: 1px solid var(--lightgray); padding: 5px 10px 5px 5px; color: var(--darkgray); font-weight: 800; font-size: 14px; margin-top: 7px; border-radius: 10px; margin-right: 10px; line-height: 26px;background-color: transparent; } 
+#header #rightmenu .btn span { width: 26px; height: 26px; display: inline-block; text-align: center; padding: 0px; background-color:var(--blue); color:var(--white); border-radius:6px; margin-right: 5px; }
+#header #rightmenu .show .btn{background-color:var(--blue); color:var(--white);border: 1px solid var(--blue);} 
+#header #rightmenu .dropdown-menu{background-color:var(--blue); color:var(--white);padding: 10px;border-radius: 14px; }
+#header #rightmenu .dropdown-menu .dropdown-item{color:var(--white); font-weight:600; font-size:14px;border-radius:6px;font-size:14px; padding: 7px 10px 7px 10px; font-weight:600;}
+#header #rightmenu .dropdown-menu .dropdown-item:hover{color:var(--white); background-color:var(--trwhite) !important; }
+#header #rightmenu .dropdown-menu .dropdown-item .fa{margin-right:5px;}
+
+/*---------------Left Menu-------------*/
+
+#leftsidemenu{position:fixed; left:0px; top:0px; z-index:1; width:250px; border-right:1px solid var(--lightgray); overflow:auto; height:100%; background-color:#fff;}
+#leftsidemenu .inlist{padding:60px 20px 10px 20px;}
+#leftsidemenu .inlist .sidemenuleft a { padding: 10px; font-size: 14px; color: var(--darkgray); display: block; font-weight: 800; line-height: 26px; }
+#leftsidemenu .inlist .sidemenuleft a span { width: 26px; height: 26px; display: inline-block; text-align: center; padding: 0px;   border-radius:6px; margin-right: 5px; }
+#leftsidemenu .inlist .sidemenuleft a:hover span { width: 26px; height: 26px; display: inline-block; text-align: center; padding: 0px; background-color:var(--blue); color:var(--white); border-radius:6px; margin-right: 5px; }
+#leftsidemenu .inlist .sidemenuleft .active span { width: 26px; height: 26px; display: inline-block; text-align: center; padding: 0px; background-color:var(--blue); color:var(--white); border-radius:6px; margin-right: 5px; }
+#leftsidemenu .inlist .sidemenuleft .active{background-color:var(--verylightblue);border-radius: 12px}
+
+#leftsidemenu .inlist .companyinfobox { margin-bottom: 10px; background-color: var(--lowblue); padding: 12px 12px; border-radius: 12px; font-weight: 500; font-size: 12px; margin-top:3px; }
+#leftsidemenu .inlist .companyinfobox .companyname{font-weight:700; font-size:14px;}
+#leftcontactbox { background-color:var(--darkbrown);color: var(--white); font-size: 14px; text-align: center; font-weight: 600; border-radius: 14px; margin-top: 15px; padding: 10px 10px 20px; min-height: 200px; padding-top: 100px; position: relative; line-height: 22px;}
+#leftcontactbox img { position: absolute; left: 16px; top: -17px; width: 204px; }
+#leftcontactbox .head{font-size:16px; font-weight:800; margin-bottom:2px;}
+
+
+/*---------------Body Mid-------------*/
+
+
+#midbody{padding-left:250px; padding-top:52px; width:100%; box-sizing:border-box; padding-right:350px;}
+#midbody .bodyouter{padding:20px;}
+h1{font-size:22px; font-weight:800; margin-bottom:20px;}
+h2{font-size:18px; font-weight:800; margin-bottom:20px;}
+.bodysection{margin-bottom:20px;}
+.bodysection .dashgraphcard { background-color: #FFFFFF; padding: 20px; box-shadow: 0px 10px 18px #29426917; border-radius: 14px; }
+.bodysection .dashgraphcard #chartdiv {width:100%; height:200px;}
+.bodysection .chartsalesouter{padding:10px 20px; border:1px solid var(--lightgray);border-radius: 20px; margin-top:10px;}
+.smalgraytext{font-size:12px; color:var(--midgay); font-weight:500;}
+.fontsize18{font-size:18px; font-weight:700;}
+.fontsize24{font-size:24px; font-weight:700;}
+.fontsize30{font-size:30px; font-weight:600;}
+.bodysection .chartsalesouter .borderleft{border-left:1px solid var(--lightgray); padding-left:20px;}
+.bodysection .blkcolorboxflight{padding:20px; color:var(--white); font-size:14px; background-color:var(--blue); margin-bottom:15px;border-radius:20px; margin-left:20px; margin-bottom:20px; position:relative;}
+.bodysection .blkcolorboxflight img { width: 64px; position: absolute; right: 20px; top: 20px; }
+
+
+.bodysection .blkcolorboxhotel{padding:20px; color:var(--white); font-size:14px; background-color:var(--pink); margin-bottom:15px;border-radius:20px; margin-left:20px; margin-bottom:20px; position:relative;}
+.bodysection .blkcolorboxhotel img { width: 64px; position: absolute; right: 20px; top: 20px; }
+
+
+.bodysection .blkcolorboxpackage{padding:20px; color:var(--white); font-size:14px; background-color:var(--darkbrown); margin-bottom:15px;border-radius:20px; margin-left:20px; position:relative;}
+.bodysection .blkcolorboxpackage img { width: 64px; position: absolute; right: 20px; top: 20px; }
+.tbtabsouter{width:100%; overflow:hidden; height:40px;  }
+.tbtabsouter a { padding: 10px 20px; float: left; border: 1px solid var(--lightgray); border-bottom: 0px; font-weight: 700; color: var(--darkgray); border-radius: 12px; margin-right: 5px; font-size: 14px;border-bottom-left-radius: 0px; border-bottom-right-radius:0px; }
+.tbtabsouter a:hover{background-color:var(--blue); color:var(--white);}
+.tbtabsouter .active{background-color:var(--blue); color:var(--white);}
+.tbtabcontent{overflow:hidden; padding:20px;border: 1px solid var(--lightgray);  border-radius:14px; border-top-left-radius:0px;  }
+.tbtabcontent table tr{border-bottom: 1px solid var(--lightgray);  font-weight:500; padding:10px 5px;}
+.tbtabcontent table tr td{padding:10px 5px;}
+.tbtabcontent table tr:last-child {border-bottom:0px !important;}
+.tbtabcontent table tr td table tr td{border:0px; padding:5px;}
+.tbtabcontent table .price{font-size:16px; font-weight:700;}
+.tbtabcontent table .flightname{font-size:15px; font-weight:700;}
+.tbtabcontent table .flightnumber{font-size:13px; font-weight:700; color:var(--midgay);}
+.tbtabcontent table .coltime{font-size:16px; font-weight:700; color:var(--midgay);}
+.tbtabcontent table .flightduration{margin-bottom:2px; padding-bottom:2px; border-bottom:1px solid var(--blue); min-width:100px;}
+.tbtabcontent table .flightdate{color:var(--midgay); font-size:13px; margin-top:2px;}
+.tbtabcontent table tr:hover{background-color: var(--hovergray); cursor:pointer; border-radius: 12px; }
+#dashbaordright{width:350px; height:100%;background-color: var(--lowblue); position:fixed; right:0px; top:0px;}
+#dashbaordright .inlistright { padding: 52px 0px 0px 0px; }
+#dashbaordright .inlistright .rightbanner{width:100%; height:300px;position:fixed; right:0px; top:52px; width:350px;}
+#dashbaordright .inlistright .rightbanner img{width:100%; height:300px;}
+#dashbaordright .tourcalouter { padding: 40px 20px 0px 20px; height: 100%; position: absolute; padding-top: 310px; width: 350px; overflow: auto; font-weight:500; }
+#dashbaordright .tourcalouter h1{font-size:16px !important; margin-bottom:10px; padding-top:10px;}
+#dashbaordright .tourcalouter .todaydate{font-size:13px; margin-bottom:10px;}
+#dashbaordright .tourcalouter .calgrid{padding:10px 0px 20px;}
+#dashbaordright .tourcalouter .calgrid table tr td{padding:0px 1px; text-align:center; font-size:14px;}
+#dashbaordright .tourcalouter .calgrid table tr td .caltab { padding: 10px;  border-radius: 14px; font-weight:600; cursor:pointer; }
+#dashbaordright .tourcalouter .calgrid table tr td .active{ padding: 10px; background-color:var(--pinkred); color:var(--white); box-shadow: 0px 10px 18px #29426917; border-radius: 14px; font-weight:600; cursor:pointer; }
+#dashbaordright .tourcalouter .calgrid table tr td .caltab:hover{ background-color:var(--blue); color:#fff;}
+#dashbaordright .tourcalouter .calgrid table tr td .active:hover{ background-color:var(--blue); color:#fff;}
+#dashbaordright .tourcalouter .calgrid table tr td .fa{background-color:var(--lightgray); padding:2px 9px; font-size:20px; cursor:pointer; border-radius: 22px;}
+#dashbaordright .tourcalouter .calgrid table tr td .fa:hover{background-color:var(--blue); color:var(--white); } 
+#dashbaordright .tourcalouter .calgrid table tr td .boxcont{margin-bottom:0px;} 
+#dashbaordright .tourcalouter .caleventouter{margin-bottom:10px; cursor:pointer;}
+#dashbaordright .tourcalouter .caleventouter .calevent{border-radius: 14px; background-color:var(--lightyellow); padding:10px; font-size:12px;} 
+#dashbaordright .tourcalouter .caleventouter .calevent .head{font-size:14px; font-weight:700;}
+
+
+
+/*----------------Login---------------------*/
+
+#loginbg{background: rgb(171,226,255); background: linear-gradient(183deg, rgba(171,226,255,1) 0%, rgba(255,255,255,1) 65%);background-attachment: fixed;}
+#loginouter { position: absolute; max-width: 1200px; height:600px; top: 0; bottom: 0; left: 0; right: 0; margin: auto;  }
+#loginouterin{ background-color:var(--white); box-shadow: 0px 10px 18px #29426917; border-radius: 14px; height:100%; margin:10px; margin-top:0px; overflow:hidden;}
+#loginouterin .leftbanner{width:100%; height:100%;}
+
+/* loginform */
+.inputbox input{padding: 12.5px;border-radius: 4px;border:1px solid #ced4da;line-height: 1.5;}
+.inputbox input::placeholder{font-size: 16px;font-weight: 500;}
+.inputbox input:focus-visible{outline: none;}
+.inputbox input:last-child{margin: 15px 0px;}
+.loginform{padding:  0px 50px;}
+.formlogo img{height: 32px;}
+.formlogo p{font-size: 13px;color: #999999; margin-top:5px;}
+.inputbox input{width:100%;}
+.loginbutton a button{background-color: var(--blue);width: 100%;text-align: center;font-size: 16px;color: var(--white);border: none;padding: 10px;border-radius: 4px;}
+.reset{margin: 10px;}
+.reset p{font-size: 13px;color: #999999; margin-top:10px;}
+.reset p a{color: var(--black);font-weight: bold;}
+.createbutton a button{font-size: 16px;color: var(--blue);border: 1px solid var(--blue);font-weight: bold;background-color: transparent;width: 100%;padding: 7px;border-radius: 4px;}
+.dontheading{text-align: center;color: #999999;}
+.loginlinks{position: relative;bottom: -78px;text-align: center;}
+.loginlinks a{color: #999999;padding: 0px 8px;}
+.loginlinks a:hover{text-decoration: underline;}
+
+/* loginform */
+
+/* .signupform */
+
+.createform{padding:30px;}
+.createform input::placeholder{padding-left: 6px;}
+.createform input:focus-visible{outline: none;}
+.createform label{display: inline-block;font-size: 12px;margin-top: 3px;margin-bottom: 0.5rem;}
+.createform input{line-height: 22px;padding: 4px;border: 1px solid var(--lightgray);width:100%;border-radius: 4px;}
+.createform span{color: var(--redcolor);}
+.youhave p{font-size: 15px;color: var(--smallgray);}
+.youhave p a{color: var(--blue);text-decoration: underline;}
+.accountheading{color: var(--darkgray);}
+.countryrow select{border: 1px solid var(--lightgray) !important;}
+
+/* agencyform */
+.agencyform{padding: 30px;}
+.agencyform input::placeholder{padding-left: 6px;}
+.agencyform input:focus-visible{outline: none;}
+.agencyform input{border: 1px solid var(--lightgray);}
+.agencyform input{line-height: 22px;padding: 4px;border: 1px solid var(--lightgray);width:100%;border-radius: 4px;}
+.agencyform label{display: inline-block;font-size: 12px;margin-top: 3px;margin-bottom: 0.5rem;}
+.agencyform select{width: 100%;border: 1px solid var(--lightgray);}
+.agencyform select{line-height: 22px;padding: 4px;border: 1px solid var(--lightgray);width:100%;border-radius: 4px;height: 32px;}
+.agencyform textarea{line-height: 22px;padding: 4px;border: 1px solid var(--lightgray);width:100%;border-radius: 4px;height: 32px;}
+.form-field{line-height: 22px;padding: 4px;border: 1px solid var(--lightgray);width:100%;border-radius: 4px;height: 32px;}
+hr{color: var(--darkgray);margin-bottom: 0px !important;width: 100%;}
+.registerlogo img{height: 32px;margin-top:19px}
+.agencyform select:focus-visible{outline: none;}
+.checkbox{display: inline;width: auto !important;}
+.registerbutton{background-color: var(--blue);color: var(--white);border: none;}
+.registerbutton:hover{opacity: 0.7;background-color: var(--blue);}
+
+
+.pagebanner{
+    height: 200px;overflow: hidden;width: 100%;border-radius: 14px;
+    position: relative;
+    background-color: rgba(27, 28, 28,0.5);
+    margin-bottom: 30px;
+}
+.pagebanner img{
+    min-height: 100%;
+    width: 100%;
+
+}
+.pagebanner span{
+    background-color: #000000ad;
+    position: absolute;
+    left: 30px;
+    top: 80px;
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 20px;
+}
+.pagecontent{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+
+}
+.aboutlink a{
+    color: var(--black);
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 23px;
+}
+.aboutlink .active{
+    color: var(--blue);
+}
+
+/* flightsearchpage */
+
+.top_bg_ofr_sb {
+    background-color: #f3f7fa !important;
+}
+
+.top_bg_ofr_sb {
+    background-image: none;
+}
+.top_bg_ofr_sb2other {
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0px 10px;
+    color: #fff;
+    height: 290px;
+    background-color: transparent;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    padding-top: 20px;
+    margin-bottom: 40px;
+    background-color: #ec0909;
+}
+.flighttopmenuwithback {
+    display: none;
+}
+.flightsearchwihite {
+    background-color: #fff;
+    padding: 17px;
+    border-radius: 8px;
+    box-shadow: 0px 10px 18px #29426917 !important;
+    padding-bottom: 48px;
+    position: relative;
+    top: 60px;
+}
+.top_bg_ofr_sb2other .searchtabs {
+    margin-bottom: 25px;
+    width: 100%;
+    overflow: hidden;
+}
+.top_bg_ofr_sb2other .searchtabs .active {
+    background-color: #f3f7fa;
+    color: var(--darkgray) !important;
+}
+
+.top_bg_ofr_sb2other .searchtabs a {
+    color: #777777 !important;
+    padding: 5px 20px;
+    margin-right: 10px;
+    float: left;
+    border-radius: 20px;
+    font-weight: 800;
+    font-size: 16px;
+}
+.searchboxouter {
+    background-color: #fff;
+    color: #000;
+    border-radius: 6px;
+    padding: 0px;
+    /* box-shadow: 2px 2px 10px #00000070; */
+    padding-left: 5px;
+}
+.flightsearchwihite .searchboxouter .tableborder table tr td {
+
+    padding: 0px 5px !important;
+    /* padding-top: 10px !important; */
+}
+.flightsearchwihite .searchboxouter table tr td {
+    
+    position: relative;
+    padding: 0px 5px;
+}
+.searchflightmainbg .searchflightouter .searchflighttableborder table tr td{
+    padding: 0px 3px !important;
+}
+.flightsearchwihite .searchboxouter .tableborder table tr td:last-child{
+    border-right: 1px SOLID #dddd !important;
+}
+.searchboxouter table tr td {
+    border-right: 1px solid #ddd;
+    position: relative;
+}
+.flightsearchwihite .lable {
+    font-weight: 500;
+    margin-left: 7px;
+    padding: 9px !important;
+    /* background-color: #FFFFFF; */
+    width: auto;
+    font-size: 14px;
+    color: #777777;
+    position: absolute;
+    top: 8px;
+}
+.searchflightmainbg {
+   
+    padding: 10px 0px !important;
+}
+.flightsearchwihite .textfield {
+    color: #000;
+}
+
+.flightsearchwihite .textfield {
+    color: #5d5d5d;
+    font-weight: 600;
+    width: 100%;
+    padding: 1px 20px !important;
+    outline: 0px;
+    font-size: 16px !important;
+    border-radius: 8px !important;
+}
+.searchboxouter .textfield {
+    font-size: 15px;
+    color: #000000;
+    font-weight: 600;
+    width: 100%;
+    padding: 19px 20px !important;
+    outline: 0px;
+    border: 8px;
+    margin-top: 14px;
+    margin-left: -5px;
+}
+.swapbtn {
+    position: absolute;
+    right: -19px;
+    width: 38px;
+    height: 38px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 100px;
+    /* border: 2px solid #ddd; */
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    z-index: 9;
+    margin-top: 0px;
+    cursor: pointer;
+    top: 17px;
+    line-height: 37px;
+    font-size: 16px;
+}
+.flightsearchwihite .flightsearchbtn {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    left: 0px;
+    bottom: -30px;
+}
+.flightsearchwihite .searchboxouter .redbuttonsearch {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+    background-color: var(--blue) !important;
+    width: 100%;
+    padding: 15px 20px;
+    outline: 0px;
+    border: 0px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    max-width: 270px;
+    border-radius: 50px;
+}
+
+.searchboxouter .redbuttonsearch {
+    background-color: #ec0909 !important;
+}
+.flightsearchwihite .searchboxouter table tr td .fa-calendar {
+    font-size: 22px;
+    color: #cfcfcf;
+    position: absolute;
+    right: 20px;
+    top: 34px;
+}
+.listlastflight{
+    float: left !important;
+    
+}
+
+.tableborder{
+    
+    border-radius: 8px;
+}
+.tableborder table tr td{
+    border: 1px solid var(--lightgray);
+}
+.listlastflight table tr td{
+    color: var(--darkgray) !important;
+}
+input:checked ~ .checkmark{
+    background-color: var(--redcolor);
+}
+.selectfareheading{
+    color: var(--darkgray);
+    position: relative;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* messagesection */
+.messagesection{
+    margin-top: 120px;
+    padding: 15px;
+    background-color: var(--lightyellow);
+    border-radius: 8px;
+    
+}
+.messagesection h4{
+    font-size: 14px;
+    text-align: center;
+}
+.offerheading h3{
+    font-size: 22px;
+    font-weight: 800;
+    margin: 22px 0px;
+}
+/* .offersection img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+} */
+/* .offersection{
+    padding-top: 1rem;
+    
+} */
+.offersection p{
+    color: var(--darkgray);
+    font-size: 16px;
+    
+}
+.booknowbtn{
+    color: var(--searchbtn);
+    font-size: 18px;
+    font-weight: 900;
+    border: none;
+    background-color: transparent;
+    margin: 24px 0px;
+  
+}
+.offerimg{
+    width: 100%;
+    overflow: hidden;
+    height: 200px;
+    border-radius: 20px;
+}
+.offerimg img{
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+}
+.offersection h6{
+    font-size: 13px;
+    text-overflow: ellipsis;
+
+}
+.offersection h4{
+    color: var(--darkgray);
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 20px !important;
+}
+#dt2{
+    background-color: transparent !important;
+}
+#pickupCitySearchfromCity2{
+    background-color: transparent !important;
+}
+#pickupCitySearchfromCity{
+    background-color: transparent !important;
+}
+input[type="radio"]{
+    margin-top: 5px;
+}
+#pickupCitySearchfromCity2{
+   margin-left: 3px !important;
+}
+.tolabel{
+    margin-left: 13px !important;
+}
+.mobdme2{
+   margin-top: 30px;
+}
+.trendingsearch h3{
+    font-size: 12px;
+    color: var(--darkgray);
+    font-weight: 600;
+    
+}
+.flightsearchwihite .searchboxouter table tr td {
+    border-right: 0px solid #ddd;
+    position: relative;
+    padding: 4px 5px;
+    line-height: 16px;
+}
+
+/* footer */
+.flightfooter{
+    background-color: #f3f7fa;
+    margin-top: 30px;
+    text-align: center;
+}
+.footerlinks a{
+    padding: 8px;
+    color: var(--black);
+    margin-top: 12px;
+    display: inline-block;
+    font-weight: 500;
+}
+.copyrighttext a{
+    color: var(--black);
+    text-align: center;
+    display: inline-block;
+    margin: 10px;
+}
+
+/* searchflightsection */
+.searchflightmainbg{
+   box-shadow: none !important;
+   top: 40px;
+   background-color: transparent;
+   padding: 17px 0px;
+}
+.bannerbgwhite{
+    background-color: var(--white) !important;
+    height: 185px;
+    margin-bottom: 20px;
+}
+.greybluebg{
+    background-color: var(--greyouter);
+}
+.greyouter{
+    background-color: var(--greyouter);
+    padding: 10px 12px;
+    border-radius: 8px !important;
+}
+.searflightmodme{
+    display: none;
+}
+.searchflightpagebtn{
+    display: none;
+}
+.searchflighttableborder table tr td{
+    border: none;
+  
+}
+.searchflightouter{
+    padding-left: 0px;
+}
+.searchflightouter .textfield{
+   margin-top: 0px;
+   margin-left: 0px;
+   background-color: var(--greyouter);
+   padding: 0px !important;
+}
+.searchflightmainbg .searchflighttab{
+    margin-bottom: 13px;
+}
+.searchsmallbtn button{
+    background-color: var(--blue) !important;
+    color: var(--white) !important;
+    font-size: 20px;
+    height: 55px;
+    width: 80%;
+    margin: 0 3px !important;
+}
+.flightswapbtn{
+    top: 12px;
+    width: 33px;
+    height: 33px;
+    line-height: 33px;
+    right: -16px;
+}
+.searchflightmainbg .lable{
+   margin-left: 0px !important;
+   padding: 0px !important;
+   position: static !important;
+   font-size: 13px;
+   
+}
+.searchflightmainbg .searchflightouter table tr td{
+    padding-top: 0px !important;
+}
+.searchflightmainbg .searchflightouter table tr td .fa-calendar{
+    top: 16px;
+}
+/* tabs */
+.nav-pills{
+    /* display: flex;
+    justify-content: space-between; */
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(25,32,36,0.16), 0 -1px 4px rgba(25,32,36,0.04);
+}
+.navline{
+    background-color: var(--lightgray);
+    width: 1px;
+    height: 58px;
+    margin-top: 1.5%;
+}
+.nav-pills .nav-item{
+   margin: 10px 10px;
+   border-radius: 10px;
+   width: 17.8%;
+   
+}
+.nav-pills .nav-item .nav-link .fa{
+    margin: 0px 5px;
+}
+.nav-pills .nav-item:hover{
+    background-color: var(--lightgray);
+}
+.nav-pills .nav-link{
+    color: var(--black);
+    font-size: 15px;
+    font-weight: 600;
+    text-align: left;
+   
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    background-color: transparent;
+    color: var(--black);
+}
+.pricingbutton{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.pricingbutton h5{
+    line-height: 18px;
+    height: 24px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-flex;
+    padding: 2px 8px;
+    background-color: var(--greyouter);
+}
+.pricingbutton i{
+    font-size: 14px;
+    font-weight: 600;
+}
+.bookdetail{
+    display: flex;
+    justify-content: space-between;
+   
+}
+.bookimg{
+    display: flex;
+    gap: 15px;
+}
+.bkimg{
+    width: 35px;
+    height: 35px;
+}
+.bkimg img{
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+}
+.bookrow{
+    background-color: var(--white);
+    padding: 10px;
+    margin-top: 15px;
+    padding-left: 0px;
+    padding-right: 0px;
+    box-shadow: 0 3px 6px rgba(25,32,36,0.16), 0 -1px 4px rgba(25,32,36,0.04);
+    border-radius: 8px;
+}
+.bookbtn a button{
+    padding: 10px 16px;
+    font-size: 14px;
+    line-height: 16px;
+    cursor: pointer;
+    background-color: var(--blue);
+    border: none;
+    outline: none;
+    color: var(--white);
+    font-weight: 600;
+    width: 100%;
+    border-radius: 4px;
+}
+/* .bookboxprice h6{
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--black);
+    line-height: 1.231;
+} */
+.bookdetail h6{
+    font-size: 16px;
+    font-weight: 600;
+     
+}
+.destination{
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+}
+.go h6{
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    margin-top: 12px;
+}
+.gopricing{
+    display: flex;
+    justify-content: space-between;
+}
+.gopricing span{
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 20px;
+}
+.gopricing .lastspan{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+.bookrow .col-lg-3{
+    margin: auto;
+    border-left: 3px solid var(--greyouter);
+}
+.bookbtn h4{
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 600;
+    
+}
+.bookprice{
+    font-weight: 400 !important;
+    font-size: 13px;
+}
+.bookbtn i{
+    border: 2px solid var(--greyouter);
+    height: 26px;
+    padding: 2px 4px;
+    font-size: 10px;
+    line-height: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+.searchflighttab a{
+    font-size: 12px;
+}
+.bookmsg{
+    background-color: var(--bookclr);
+    color: var(--black);
+    text-align: center;
+    font-size: 12px;
+    border-radius: 4px;
+}
+.blackbox{
+    display: flex;
+    margin: 12px 0px;
+    align-items: center;
+}
+.blackbg{
+    background-color: var(--black);
+    color: var(--white);
+    width: 65px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 12px;
+
+}
+.blackbox h5{
+    font-size: 13px;
+    color: var(--black);
+    padding-left: 5px;
+}
+.refundtable{
+    font-size: 12px;
+}
+
+.refundtable img{
+    width: 20px;
+}
+.green{
+    color: var(--greencolor);
+}
+.red{
+    color: var(--redcolor);
+}
+.bookboxprice{
+    text-align: center;
+}
+.nonstop h4{
+    font-size: 16px;
+    font-weight: 600;
+}
+.nonstop{
+    color: var(--darkgray);
+    text-align: center;
+}
+.nonstopborder{
+    border-top: 1px solid var(--lightgray);
+    width: 120px;
+    margin: 5px 0px;
+    position: relative;
+}
+.nonstopborder::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    background-color: var(--lightgray);
+    width: 7px;
+    height: 7px;
+    border-radius: 50px;
+    top: -4px;
+}
+.nonstopborder::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    background-color: var(--lightgray);
+    width: 7px;
+    height: 7px;
+    border-radius: 50px;
+    top: -4px;
+}
+.nonstopborder .fa{
+    top: -6px;
+    position: absolute;
+    transform: rotate(45deg);
+    margin-left: -8px;
+    color: var(--blue);
+}
+.bookimg h6{
+    font-size: 15px;
+}
+.bookimg h6 span{
+    color: var(--darkgray);
+    font-size: 12px;
+}
+.planeimg img{
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+}
+.bookrow .col-lg-9{
+    padding-right: 18px;
+}
+.bookrow .col-lg-3{
+    padding-left: 18px;
+}
+.refundtable .fa{
+    font-size: 12px;
+    margin-right: 3px;
+    color: var(--smallgray);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* mediaqueries */
+@media (max-width: 576px){
+    .logintable  tr td{
+        display: block;
+        width: 100%;
+    }
+    .loginform{
+        padding:20px;
+        
+    }
+    #loginouter {
+        position: static;
+        max-width: 1200px;
+        height: 600px;
+        margin: auto;
+        margin-top: 80px !important;
+    }
+    .formloginouter{
+        height: 84% !important;
+        
+    }
+    #loginouterin .leftbanner{
+        display: none;
+    }
+    .createform,.agencyform{
+        padding: 0px;
+    }
+    .agencyform{
+        margin-top: 2rem;
+    }
+    .accountheading{
+        font-size: 15px;
+        margin: 10px 0px;
+    }
+    .agencyform h2{
+        font-size: 15px;
+    }
+    .createheading{
+        margin-left: .8rem !important;
+        font-size: 17px;
+    }
+    .registerlogo img{
+        height: 28px;
+    }
+    #menu{
+        display: none;
+    }
+    .loginbody{
+        overflow: hidden;
+    }
+    .formlogo img{
+        display: none;
+    }
+    .mainbutton{
+        display: none !important;
+    }
+    .menubtn{
+        display: unset !important;
+        border: none !important;
+    }
+    .fa-bars{
+        font-size: 21px;
+        font-weight: bold;
+        position: relative;
+        right: -18px;
+        top: 1px;
+    }
+    #header #rightmenu .show  .btn
+    {   color: var(--black) !important;
+        background-color: transparent;
+    }
+    .registerlogo img{
+        display: none;
+    }
+    #leftsidemenu{
+        display: none !important;
+    }
+    #midbody {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #dashbaordright .inlistright .rightbanner{
+        width: 100%;
+        height: 300px;
+        position: static;
+        right: 0px;
+        top: 52px;
+    }
+    #dashbaordright {
+        width: 100%;
+        height: 100%;
+        background-color: var(--lowblue);
+        position: static;
+        right: 0px;
+        top: 0px;
+    }
+    .inlistright{
+        padding-top: 0px !important;
+    }
+    #dashbaordright .tourcalouter{
+        padding-top: 0px !important;
+        height: auto;
+    }
+    .bodyflightsection table tr td{
+        display: block;
+        width: 100%;
+    }
+    .bodysection .blkcolorboxflight{
+        margin-left: 0px;
+    }
+    .bodysection .blkcolorboxhotel{
+        margin-left: 0px;
+    }
+    .bodysection .blkcolorboxpackage{
+        margin-left: 0px;
+    }
+    .tbtabcontent {
+        overflow: auto;
+        border: 1px solid var(--lightgray);
+        border-radius: 14px;
+        border-top-left-radius: 0px;
+    }
+    .bodyflightsection .pricetable tr{
+        display: grid !important;
+        grid-template-columns: auto auto auto;
+    }
+    ::-webkit-scrollbar{
+    height: 2px;
+    scrollbar-color: var(--redcolor);
+    }
+    #dashbaordright .tourcalouter{
+        width: 100%;
+        
+    }
+    .flightsearchwihite .searchboxouter .tableborder table tr td{
+        width: 46% !important;
+        display: inline-block;
+        text-align: center !important;
+        line-height: 0px;
+        border: 1px solid var(--blue);
+        margin: 5px 5px;
+        border-right: 1px solid var(--blue) !important;
+        background-color: var(--lightgray);
+        border-radius: 5px !important;
+        
+    }
+    #header #logo img{
+        height: 28px;
+    }
+ 
+    .fa-calendar:before{
+        position: relative;
+        top: -3px;
+        right: -10px;
+        font-size: 18px;
+        color: var(--darkgray);
+    }
+    .flightsearchwihite .searchboxouter .tableborder table tr td:last-child{
+        width: 95% !important;
+        
+    }
+
+    #pickupCitySearchfromCity2{
+        text-align: center;
+        margin-left: 2rem;
+    }
+    #dt1{
+        background-color: transparent;
+        
+    }
+    .searchboxouter .textfield{
+        padding: 19px 9px !important;
+    }
+    #travellersshow{
+        text-align: left !important;
+        background-color: transparent;
+    }
+    .flightsearchwihite .lable{
+        padding: 9px 0px !important;
+    }
+    .swapbtn{
+        background-color: var(--lightgray);
+        border: 1px solid var(--blue);
+        color: var(--blue);
+        right: -24px;
+        top: 15px;
+    }
+   .messagesection {
+    margin-top: 213px;
+    padding: 15px;
+    background-color: var(--lightyellow);
+}
+.listlastflighttwo{
+    display: none !important;
+}
+.trendingsearch{
+    display: none;
+}
+.flightsearchwihite .flightsearchbtn {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    left: 0px;
+    bottom: -20px;
+}
+.flightsearchwihite .searchboxouter .redbuttonsearch {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+    background-color: var(--blue) !important;
+    max-width: 300px !important;
+    padding: 8px 20px;
+    border-radius: 50px;
+}
+.listlastflight div:first-child{
+    margin-right: 10px;
+}
+.listlastflight div{
+    background-color: transparent !important;
+    margin-left: -4px;
+}
+.selectfareheading{
+    display: none;
+}
+/* .listlastflight{
+   display: inline;
+  
+} */
+.offerrow .col-lg-3{
+    width: 50%;
+    
+}
+
+.top_bg_ofr_sb2other {
+    padding-top: 0px !important;
+}
+.mobilecontainer{
+    padding: 5px  !important;
+}
+#fromlabel{
+   width: 85% !important;
+}
+#twolabel{
+    width: 80%;
+}
+.searchboxouter .textfield{
+    padding: 12px 10px !important;
+    font-size: 15px !important;
+}
+/* .doctortable,.seniorcitizentable{
+    display: none;
+} */
+.flightsearchwihite{
+    padding: 10px;
+}
+.offersection h4{
+    font-size: 14px;
+}
+.offersection h6{
+    margin-bottom: 26px;
+}
+.messagesection h4{
+    font-size: 12px;
+}
+
+.mobdme2{
+    margin-top: 0px;
+}    
+.top_bg_ofr_sb2other .searchtabs a {
+    font-size: 14px;
+    padding: 5px 9px;
+    margin-right: 10px;
+    float: left;
+    border-radius: 20px;
+}
+.flightsearchwihite{
+    top: 48px;
+    padding: 5px;
+    padding-bottom: 31px;
+}
+.searchboxouter{
+    margin-top: -16px;
+}
+.tableborder table{
+    max-width: 100% !important;
+    margin: 2.5px !important;
+}
+.offerrow .col-lg-3{
+    width: 50%;
+    padding: 5px;
+}
+.textcontent{
+    padding: 0px !important;
+    
+}
+.top_bg_ofr_sb2other .searchtabs{
+    margin-top: 10px;
+    margin-left: 5px;
+}
+.messagerow .col-lg-12{
+    padding: 5px;
+}
+.flightsearchwihite .searchboxouter .tableborder table tr td:last-child{
+    border-right: 1px solid var(--blue) !important;
+}
+
+}
